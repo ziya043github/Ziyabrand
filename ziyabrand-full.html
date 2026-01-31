@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ziya Brand - Lüks Moda E-Commerce</title>
+  <meta name="description" content="Ziya Brand — yüksək səviyyəli moda üçün müasir e-ticarət. Kişi, Qadın, Uşaq və Aksesuarlar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+:root{--bg:#faf9f7;--bg-2:#f5f3f0;--text:#2c2a28;--muted:#8a8580;--card:rgba(255,255,255,0.92);--glass:rgba(255,255,255,0.55);--glass-border:rgba(255,255,255,0.6);--pastel-rose:#f4e4e4;--pastel-mint:#e4f0ed;--pastel-lavender:#ede8f2;--border:rgba(44,42,40,0.08)}
+*{box-sizing:border-box}html,body{height:100%}
+body{margin:0;font-family:"Montserrat","Inter",system-ui,sans-serif;background:linear-gradient(180deg,var(--bg),var(--bg-2));color:var(--text);overflow-x:hidden}
+#bg-canvas{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.site-header{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:var(--glass);border-bottom:1px solid var(--glass-border);box-shadow:0 8px 32px rgba(44,42,40,0.06);transition:box-shadow .35s}
+.site-header.scrolled{box-shadow:0 8px 40px rgba(44,42,40,0.08)}
+.header-inner{max-width:1200px;margin:0 auto;padding:12px 20px;display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center}
+.brand{font-weight:700;font-size:20px;letter-spacing:.6px}
+.nav a{margin:0 10px;text-decoration:none;color:var(--text);padding:8px 10px;border-radius:12px;transition:transform .25s cubic-bezier(0.34,1.56,0.64,1),background .2s,color .2s}
+.nav a:hover{background:rgba(0,0,0,0.05);transform:translateY(-2px)}
+.header-actions{display:flex;align-items:center;gap:10px}
+.header-actions input[type="search"]{border:1px solid var(--border);background:rgba(255,255,255,0.7);padding:8px 12px;border-radius:12px;outline:none;transition:box-shadow .2s,transform .15s}
+.header-actions input[type="search"]:focus{box-shadow:0 8px 24px rgba(0,0,0,0.08);transform:translateY(-1px)}
+.btn{border:1px solid var(--border);background:var(--card);padding:10px 14px;border-radius:14px;cursor:pointer;transition:transform .3s cubic-bezier(0.34,1.56,0.64,1),box-shadow .25s,background .2s,color .2s}
+.btn:active{transform:scale(0.98)}
+.btn.primary{background:var(--text);color:#fff}
+.btn.primary:hover{box-shadow:0 16px 30px rgba(23,23,23,0.18)}
+.header-cart{display:inline-flex;align-items:center;gap:8px}
+.cart-count{display:inline-flex;min-width:22px;height:22px;align-items:center;justify-content:center;font-size:12px;background:var(--text);color:#fff;border-radius:999px;padding:0 6px}
+.hero{position:relative;height:70vh;min-height:520px;border-bottom:1px solid var(--border);overflow:hidden}
+.hero-layer{position:absolute;inset:0;transform:translateZ(0)}
+.hero-bg{background:radial-gradient(1200px 600px at 20% 20%,var(--pastel-rose),transparent 60%),radial-gradient(900px 600px at 80% 40%,var(--pastel-mint),transparent 60%),radial-gradient(600px 400px at 50% 70%,var(--pastel-lavender),transparent 50%)}
+.hero-image{background-image:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop');background-size:cover;background-position:center;opacity:.75}
+.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:80px 20px;display:flex;flex-direction:column;gap:16px;color:#0f0f0f}
+.hero h1{font-size:48px;line-height:1.1;margin:0;animation:heroFadeUp .8s cubic-bezier(0.4,0,0.2,1) .2s both}
+.hero p{font-size:18px;color:#222;max-width:600px;margin:0;animation:heroFadeUp .8s cubic-bezier(0.4,0,0.2,1) .35s both}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;animation:heroFadeUp .8s cubic-bezier(0.4,0,0.2,1) .5s both}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.categories{max-width:1200px;margin:40px auto 80px;padding:0 20px}
+.category h2{font-size:28px;margin:26px 0 12px}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media(max-width:1024px){.product-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.product-grid{grid-template-columns:1fr}}
+.product-card{position:relative;background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;cursor:pointer;transition:transform .35s cubic-bezier(0.34,1.56,0.64,1),box-shadow .35s,border-color .35s}
+.product-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 20px 48px rgba(44,42,40,0.14);border-color:rgba(44,42,40,0.15)}
+.product-media{position:relative;aspect-ratio:1/1.2;overflow:hidden}
+.product-media img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:opacity .35s,transform .4s cubic-bezier(0.4,0,0.2,1)}
+.product-media img.alt{position:absolute;inset:0;opacity:0}
+.product-card:hover .product-media img.main{opacity:0}
+.product-card:hover .product-media img.alt{opacity:1;transform:scale(1.08)}
+.product-media::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(250,249,247,0.15) 100%);pointer-events:none}
+.quick-add{position:absolute;bottom:12px;left:12px;right:12px;opacity:0;transform:translateY(6px);transition:opacity .22s,transform .22s;display:grid;grid-template-columns:1fr auto;gap:10px}
+.product-card:hover .quick-add{opacity:1;transform:translateY(0)}
+.product-info{padding:12px 14px 16px;display:grid;gap:6px}
+.product-title{font-size:16px}
+.price-row{display:flex;align-items:center;justify-content:space-between}
+.price{font-weight:600}
+.floating-cart{position:fixed;right:24px;bottom:24px;z-index:90;background:var(--text);color:#fff;border:none;border-radius:999px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:0 4px 24px rgba(44,42,40,0.3);cursor:pointer;transition:transform .4s cubic-bezier(0.34,1.56,0.64,1);animation:cart-float 3s ease-in-out infinite}
+.floating-cart:hover{transform:translateY(-6px) scale(1.1);box-shadow:0 8px 32px rgba(44,42,40,0.35);animation:none}
+@keyframes cart-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.floating-cart .cart-count{position:absolute;top:-2px;right:-2px;background:var(--pastel-rose);color:var(--text)}
+.cart-drawer{position:fixed;inset:0;z-index:200;pointer-events:none;visibility:hidden;transition:visibility .35s}
+.cart-drawer.open{pointer-events:auto;visibility:visible}
+.cart-drawer-backdrop{position:absolute;inset:0;background:rgba(44,42,40,0.25);opacity:0;transition:opacity .35s}
+.cart-drawer.open .cart-drawer-backdrop{opacity:1}
+.cart-drawer-panel{position:absolute;top:0;right:0;width:100%;max-width:400px;height:100%;background:var(--card);box-shadow:-8px 0 40px rgba(44,42,40,0.1);transform:translateX(100%);transition:transform .35s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column}
+.cart-drawer.open .cart-drawer-panel{transform:translateX(0)}
+.cart-drawer-header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)}
+.cart-drawer-header h3{font-size:1.25rem;margin:0}
+.cart-close{width:36px;height:36px;border:none;background:transparent;font-size:1.5rem;cursor:pointer;color:var(--muted);transition:color .2s,background .2s;border-radius:8px}
+.cart-close:hover{color:var(--text);background:var(--bg-2)}
+.cart-drawer-body{flex:1;overflow-y:auto;padding:1rem}
+.cart-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border)}
+.cart-item:last-child{border-bottom:none}
+.cart-item-img{width:72px;height:96px;object-fit:cover;border-radius:8px}
+.cart-item-info{flex:1}
+.cart-item-info h4{margin:0 0 .25rem;font-size:.95rem}
+.cart-item-info p{margin:0;font-size:.9rem;color:var(--muted)}
+.cart-drawer-footer{padding:1.5rem;border-top:1px solid var(--border)}
+.cart-total{margin:0 0 1rem;font-size:1.1rem}
+.cart-checkout{width:100%}
+.product-modal{position:fixed;inset:0;z-index:300;pointer-events:none;visibility:hidden;transition:visibility .4s}
+.product-modal.open{pointer-events:auto;visibility:visible}
+.product-modal-backdrop{position:absolute;inset:0;background:rgba(44,42,40,0.4);backdrop-filter:blur(8px);opacity:0;transition:opacity .4s}
+.product-modal.open .product-modal-backdrop{opacity:1}
+.product-modal-content{position:absolute;inset:24px;max-width:900px;max-height:calc(100vh - 48px);margin:auto;background:var(--card);border-radius:24px;box-shadow:0 24px 80px rgba(44,42,40,0.2);overflow:hidden;transform:scale(0.9);opacity:0;transition:transform .4s cubic-bezier(0.34,1.56,0.64,1),opacity .35s}
+.product-modal.open .product-modal-content{transform:scale(1);opacity:1}
+.product-modal-close{position:absolute;top:16px;right:16px;z-index:10;width:40px;height:40px;border:none;background:var(--bg-2);font-size:1.5rem;cursor:pointer;border-radius:50%;color:var(--muted);transition:all .25s}
+.product-modal-close:hover{background:var(--text);color:#fff;transform:rotate(90deg)}
+.product-modal-body{padding:2rem;height:100%;overflow-y:auto}
+.product-modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+@media(max-width:768px){.product-modal-grid{grid-template-columns:1fr}}
+.product-modal-media{aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:var(--bg-2)}
+.product-modal-media img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.product-modal-brand{display:inline-block;font-size:.8rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem}
+.product-modal-title{font-size:1.5rem;margin:0 0 .5rem}
+.product-modal-sold{font-size:.9rem;color:#22c55e;margin:0 0 1rem}
+.product-modal-desc{font-size:.95rem;color:var(--muted);line-height:1.6;margin:0 0 1.5rem}
+.product-modal-price{font-size:1.5rem;font-weight:700;margin:0 0 1rem}
+.product-modal-size{width:100%;padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-family:inherit;font-size:1rem;margin-bottom:1rem;background:var(--bg-2);transition:border-color .2s}
+.product-modal-size:focus{outline:none;border-color:var(--text)}
+.product-modal-add{width:100%}
+.site-footer{border-top:1px solid var(--border);background:rgba(255,255,255,0.7)}
+.footer-inner{max-width:1200px;margin:0 auto;padding:24px 20px;display:flex;align-items:center;justify-content:space-between;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(24px) scale(0.96);transition:opacity .5s cubic-bezier(0.4,0,0.2,1),transform .5s cubic-bezier(0.34,1.56,0.64,1)}
+.reveal.active{opacity:1;transform:translateY(0) scale(1)}
+  </style>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">Ziya Brand</div>
+      <nav class="nav">
+        <a href="#men">Kişi</a>
+        <a href="#women">Qadın</a>
+        <a href="#kids">Uşaq</a>
+        <a href="#accessories">Aksesuar</a>
+      </nav>
+      <div class="header-actions">
+        <input type="search" placeholder="Axtarış" aria-label="Axtar">
+        <button class="btn header-cart" id="header-cart-btn" aria-label="Səbət"><span class="cart-count" id="cart-count">0</span> 🛍️</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-layer hero-bg"></div>
+      <div class="hero-layer hero-image"></div>
+      <div class="hero-content">
+        <h1>Müasir Moda Kolleksiyaları</h1>
+        <p>Yüngül, sürətli və zərif alış-veriş təcrübəsi.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#women">Yeni Qadın Kolleksiyası</a>
+          <a class="btn" href="#men">Kişi Kolleksiyası</a>
+          <a class="btn" href="#kids">Uşaq Kolleksiyası</a>
+          <a class="btn" href="#accessories">Aksesuarlar</a>
+        </div>
+      </div>
+    </section>
+    <section class="categories">
+      <div class="category" id="men"><h2>Kişi</h2><div class="product-grid" data-category="men"></div></div>
+      <div class="category" id="women"><h2>Qadın</h2><div class="product-grid" data-category="women"></div></div>
+      <div class="category" id="kids"><h2>Uşaq</h2><div class="product-grid" data-category="kids"></div></div>
+      <div class="category" id="accessories"><h2>Aksesuar</h2><div class="product-grid" data-category="accessories"></div></div>
+    </section>
+  </main>
+  <button class="floating-cart" id="floating-cart" aria-label="Səbətə bax">🛒<span class="cart-count" id="floating-cart-count">0</span></button>
+  <div class="product-modal" id="product-modal" aria-hidden="true">
+    <div class="product-modal-backdrop" id="product-modal-backdrop"></div>
+    <div class="product-modal-content"><button class="product-modal-close" id="product-modal-close" aria-label="Bağla">×</button><div class="product-modal-body" id="product-modal-body"></div></div>
+  </div>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="cart-drawer-backdrop" id="cart-backdrop"></div>
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header"><h3>Səbət</h3><button class="cart-close" id="cart-close" aria-label="Bağla">×</button></div>
+      <div class="cart-drawer-body" id="cart-items"></div>
+      <div class="cart-drawer-footer"><p class="cart-total">Cəmi: <strong>0 ₼</strong></p><button class="btn primary cart-checkout">Ödənişə keç</button></div>
+    </div>
+  </aside>
+  <footer class="site-footer"><div class="footer-inner"><div>© 2026 Ziya Brand</div><div>Lüks Moda E-Commerce</div></div></footer>
+  <script>
+(function(){
+const state={cart:[],mouse:{x:0,y:0}};
+const canvas=document.getElementById('bg-canvas');
+const ctx=canvas.getContext('2d');
+let particles=[];
+function resizeCanvas(){canvas.width=window.innerWidth;canvas.height=window.innerHeight;initParticles()}
+function initParticles(){const c=Math.floor((canvas.width*canvas.height)/35000);particles=[];for(let i=0;i<c;i++)particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:1+Math.random()*2.2,vx:(Math.random()-0.5)*0.4,vy:(Math.random()-0.5)*0.4});}
+function drawParticles(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const g=ctx.createRadialGradient(state.mouse.x,state.mouse.y,0,state.mouse.x,state.mouse.y,400);
+  g.addColorStop(0,'rgba(244,228,228,0.2)');g.addColorStop(0.5,'rgba(228,240,237,0.08)');g.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=g;ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle='rgba(90,86,82,0.12)';
+  particles.forEach(p=>{
+    p.vx+=(state.mouse.x-p.x)*0.0008;p.vy+=(state.mouse.y-p.y)*0.0008;
+    p.x+=p.vx;p.y+=p.vy;p.vx*=0.98;p.vy*=0.98;
+    if(p.x<-10)p.x=canvas.width+10;if(p.x>canvas.width+10)p.x=-10;
+    if(p.y<-10)p.y=canvas.height+10;if(p.y>canvas.height+10)p.y=-10;
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+  });
+  requestAnimationFrame(drawParticles);
+}
+window.addEventListener('mousemove',e=>{state.mouse.x=e.clientX;state.mouse.y=e.clientY});
+window.addEventListener('resize',resizeCanvas);
+resizeCanvas();drawParticles();
+const hero=document.getElementById('hero');
+if(hero){const heroBg=hero.querySelector('.hero-bg'),heroImage=hero.querySelector('.hero-image');
+document.addEventListener('scroll',()=>{const y=window.scrollY||0;if(heroBg)heroBg.style.transform=`translateY(${y*-0.04}px) scale(1.02)`;if(heroImage)heroImage.style.transform=`translateY(${y*-0.08}px) scale(1.03)`},{passive:true});}
+const IMG=id=>`https://images.unsplash.com/photo-${id}?w=600&h=720&fit=crop&q=85`;
+const products=[
+  {id:'m1',title:'Kişi Klassik Gödəkçə',price:89,category:'men',brand:'Ziya Essentials',sold:2847,desc:'Yüksək keyfiyyətli parça, klassik dizayn. Gündəlik və iş üçün ideal.',main:IMG('1594938298603-c8148c4dae35'),alt:IMG('1620799140408-edc6dcb6d633')},
+  {id:'m2',title:'Yüngül Kişi Palto',price:159,category:'men',brand:'Ziya Premium',sold:1203,desc:'İlk bahar üçün yüngül və modası keçməyən palto. İtalyan parçadan.',main:IMG('1591047139829-d91aecb6caea'),alt:IMG('1544022613-e87ca75a784a')},
+  {id:'m3',title:'Oversize Sviter',price:79,category:'men',brand:'Ziya Street',sold:4521,desc:'Rahat oversize kəsik, yumuşaq triko parça. Uniseks.',main:IMG('1620799140188-3b2a02fd9a77'),alt:IMG('1576566588028-4147f3842f27')},
+  {id:'m4',title:'Parça Şalvar',price:69,category:'men',brand:'Ziya Basics',sold:3892,desc:'Chino üslubunda smart-casual şalvar. Çox rəng seçimi.',main:IMG('1624378439583-faa8d0e768af'),alt:IMG('1594938298603-c8148c4dae35')},
+  {id:'w1',title:'Parlaq Ətək',price:119,category:'women',brand:'Ziya Woman',sold:2156,desc:'Parlaq parça, əsas kolleksiya. Xüsusi gecələr üçün.',main:IMG('1595777457583-95e059d581b8'),alt:IMG('1566174053879-31528523f8ae')},
+  {id:'w2',title:'Kətan Bluzka',price:64,category:'women',brand:'Ziya Nature',sold:5234,desc:'Təbii kətan parça, yaz-yay üçün. Nəfəs alan material.',main:IMG('1564257631407-4deb1f99d992'),alt:IMG('1558618666-fcd25c85cd64')},
+  {id:'w3',title:'Qadın Üstün Palto',price:199,category:'women',brand:'Ziya Premium',sold:892,desc:'İtalyan parçadan yüksək modelli palto. Çox illik istifadə.',main:IMG('1544022613-e87ca75a784a'),alt:IMG('1594938298603-c8148c4dae35')},
+  {id:'w4',title:'Əlvan Köynək',price:54,category:'women',brand:'Ziya Essentials',sold:6781,desc:'Yüngül parça, rəngli naxışlar. Gündəlik kombinasiya üçün.',main:IMG('1576566588028-4147f3842f27'),alt:IMG('1564257631407-4deb1f99d992')},
+  {id:'k1',title:'Uşaq Sviter',price:39,category:'kids',brand:'Ziya Kids',sold:3124,desc:'Uşaq dərisi üçün yumşaq triko. Hipoallergenik material.',main:IMG('1519457431-44ccd64a579b'),alt:IMG('1503919545889-aef636e10ad4')},
+  {id:'k2',title:'Uşaq Köynək',price:34,category:'kids',brand:'Ziya Kids',sold:4567,desc:'Rahat və davamlı. Tez quruyan parça.',main:IMG('1503919545889-aef636e10ad4'),alt:IMG('1519457431-44ccd64a579b')},
+  {id:'k3',title:'Uşaq Palto',price:79,category:'kids',brand:'Ziya Kids',sold:1543,desc:'Qış üçün isti və su keçirməyən. 2–8 yaş.',main:IMG('1519238263530-99bdd11df2ea'),alt:IMG('1522771930-78848d9293e8')},
+  {id:'a1',title:'Dəri Qolbaq',price:59,category:'accessories',brand:'Ziya Accessories',sold:2890,desc:'Əsl dəri, minimalist dizayn. Kişi və qadın üçün.',main:IMG('1523275335684-37898b6baf30'),alt:IMG('1584917865442-de89df76afd3')},
+  {id:'a2',title:'Pələng Gözlük',price:129,category:'accessories',brand:'Ziya Premium',sold:967,desc:'UV qoruma, hafif çərçivə. Klassik və müasir.',main:IMG('1572635196237-14b3f281503f'),alt:IMG('1511499767150-a48a237f0083')},
+  {id:'a3',title:'Əl Çantası',price:149,category:'accessories',brand:'Ziya Premium',sold:1234,desc:'Əsl dəri, laptop bölməli. İş və gündəlik üçün.',main:IMG('1584917865442-de89df76afd3'),alt:IMG('1548036328-c9fa89d128fa')},
+  {id:'a4',title:'Şallı Dəsti',price:44,category:'accessories',brand:'Ziya Basics',sold:5432,desc:'Yun və kaşmir qarışığı. Qış aksesuarı.',main:IMG('1520903920243-00d872a2d1c9'),alt:IMG('1576871337632-b9aef4c17ab9')}
+];
+function openProductModal(pid){const p=products.find(x=>x.id===pid);if(!p)return;const body=document.getElementById('product-modal-body');if(!body)return;const sold=(p.sold||0).toLocaleString('az-AZ');body.innerHTML=`<div class="product-modal-grid"><div class="product-modal-media"><img src="${p.main}" alt="${p.title}"></div><div class="product-modal-info"><span class="product-modal-brand">${p.brand||'Ziya Brand'}</span><h2 class="product-modal-title">${p.title}</h2><p class="product-modal-sold">${sold} ədəd satılıb</p><p class="product-modal-desc">${p.desc||''}</p><p class="product-modal-price">${p.price.toFixed(2)} ₼</p><select class="product-modal-size"><option>Ölçü seçin</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option></select><button class="btn primary product-modal-add" data-id="${p.id}">Səbətə əlavə et</button></div></div>`;body.querySelector('.product-modal-add')?.addEventListener('click',e=>{e.stopPropagation();addToCart(p.id);bumpCart()});document.getElementById('product-modal').classList.add('open');document.body.style.overflow='hidden'}
+function closeProductModal(){document.getElementById('product-modal').classList.remove('open');document.body.style.overflow=''}
+function addToCart(pid){const p=products.find(x=>x.id===pid);if(!p)return;const ex=state.cart.find(x=>x.id===pid);if(ex)ex.qty+=1;else state.cart.push({...p,qty:1});updateCartUI();bumpCart()}
+function updateCartUI(){const total=state.cart.reduce((a,i)=>a+(i.qty||1),0),sum=state.cart.reduce((a,i)=>a+(i.price*(i.qty||1)),0);document.getElementById('cart-count')&&(document.getElementById('cart-count').textContent=total);document.getElementById('floating-cart-count')&&(document.getElementById('floating-cart-count').textContent=total);const te=document.querySelector('.cart-total strong');if(te)te.textContent=sum.toFixed(2)+' ₼';const b=document.getElementById('cart-items');if(!b)return;if(state.cart.length===0){b.innerHTML='<p style="color:var(--muted);padding:1rem">Səbət boşdur</p>';return}b.innerHTML=state.cart.map(i=>`<div class="cart-item"><img class="cart-item-img" src="${i.main}" alt="${i.title}"><div class="cart-item-info"><h4>${i.title}</h4><p>${i.qty||1} × ${i.price.toFixed(2)} ₼</p></div></div>`).join('')}
+function toggleCart(){document.getElementById('cart-drawer').classList.toggle('open')}
+function bumpCart(){const btn=document.getElementById('floating-cart');if(btn)btn.animate([{transform:'translateY(0) scale(1)'},{transform:'translateY(-4px) scale(1.06)'},{transform:'translateY(0) scale(1)'}],{duration:400,easing:'ease-out'})}
+function renderProducts(){document.querySelectorAll('.product-grid').forEach(grid=>{const cat=grid.getAttribute('data-category');products.filter(p=>p.category===cat).forEach((p,i)=>{const card=document.createElement('div');card.className='product-card reveal';card.style.animationDelay=i*60+'ms';const media=document.createElement('div');media.className='product-media';media.innerHTML=`<img class="main" src="${p.main}" alt="${p.title}"><img class="alt" src="${p.alt}" alt="${p.title}">`;const quick=document.createElement('div');quick.className='quick-add';quick.innerHTML=`<select><option>Ölçü</option><option>S</option><option>M</option><option>L</option></select><button class="btn primary">Səbətə at</button>`;quick.querySelector('button').onclick=e=>{e.stopPropagation();addToCart(p.id)};const info=document.createElement('div');info.className='product-info';info.innerHTML=`<div class="product-title">${p.title}</div><div class="price-row"><div class="price">${p.price.toFixed(2)} ₼</div><button class="btn">Səbət</button></div>`;info.querySelector('.price-row button').onclick=e=>{e.stopPropagation();addToCart(p.id)};card.onclick=()=>openProductModal(p.id);quick.onclick=e=>e.stopPropagation();info.querySelector('.price-row').onclick=e=>e.stopPropagation();card.appendChild(media);card.appendChild(quick);card.appendChild(info);grid.appendChild(card)})})}
+renderProducts();
+const observer=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('active'),i*40);observer.unobserve(e.target)}})},{threshold:0.08,rootMargin:'0 0 -30px 0'});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.addEventListener('DOMContentLoaded',updateCartUI);
+document.getElementById('floating-cart')?.addEventListener('click',toggleCart);
+document.getElementById('header-cart-btn')?.addEventListener('click',toggleCart);
+document.getElementById('cart-close')?.addEventListener('click',toggleCart);
+document.getElementById('cart-backdrop')?.addEventListener('click',toggleCart);
+document.getElementById('product-modal-close')?.addEventListener('click',closeProductModal);
+document.getElementById('product-modal-backdrop')?.addEventListener('click',closeProductModal);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(document.getElementById('product-modal').classList.contains('open'))closeProductModal();else if(document.getElementById('cart-drawer').classList.contains('open'))toggleCart()}});
+window.addEventListener('scroll',()=>{document.querySelector('.site-header')?.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
+})();
+  </script>
+</body>
+</html>

@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ziya Brand</title>
-    <meta name="description" content="Ziya Brand — yüksək səviyyəli moda üçün müasir e-ticarət UI/UX">
+    <title>Ziya Brand - Lüks Moda E-Commerce</title>
+    <meta name="description" content="Ziya Brand — Lüks, zərif və müasir moda. Yeni Kolleksiya 2026.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <canvas id="bg-canvas"></canvas>
+    <div class="top-banner">Yeni Kolleksiya 2026</div>
     <header class="site-header">
       <div class="header-inner">
         <div class="brand">Ziya Brand</div>
@@ -32,36 +32,35 @@
     </header>
     <main>
       <section class="hero" id="hero">
-        <div class="hero-layer hero-bg"></div>
-        <div class="hero-layer hero-image"></div>
         <div class="hero-content">
-          <h1>Müasir Moda Kolleksiyaları</h1>
-          <p>Yüngül, sürətli və zərif alış-veriş təcrübəsi.</p>
+          <h2 class="hero-title">Müasir Moda Kolleksiyaları</h2>
+          <p class="hero-desc">Lüks, zərif və müasir dizaynlar. Ziya Brand ilə stilinizi kəşf edin.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#women">Yeni Qadın Kolleksiyası</a>
-            <a class="btn" href="#men">Kişi Kolleksiyası</a>
-            <a class="btn" href="#kids">Uşaq Kolleksiyası</a>
-            <a class="btn" href="#accessories">Aksesuarlar</a>
+            <a class="btn primary" href="#products">Qadın Kolleksiyası</a>
+            <a class="btn" href="#products">Kişi Kolleksiyası</a>
           </div>
         </div>
       </section>
-      <section class="categories">
-        <div class="category" id="men">
-          <h2>Kişi</h2>
-          <div class="product-grid" data-category="men"></div>
+      <section class="category-cards">
+        <a href="#products" class="category-card">
+          <h3>Kişi</h3>
+          <p>Klassik və müasir</p>
+        </a>
+        <a href="#products" class="category-card">
+          <h3>Qadın</h3>
+          <p>Zərif və şık</p>
+        </a>
+        <a href="#products" class="category-card">
+          <h3>Uşaq</h3>
+          <p>Rahat və şən</p>
+        </a>
+      </section>
+      <section class="all-products" id="products">
+        <div class="all-products-header">
+          <h2>Bütün Məhsullar</h2>
+          <span class="product-count" id="product-count">28 məhsul</span>
         </div>
-        <div class="category" id="women">
-          <h2>Qadın</h2>
-          <div class="product-grid" data-category="women"></div>
-        </div>
-        <div class="category" id="kids">
-          <h2>Uşaq</h2>
-          <div class="product-grid" data-category="kids"></div>
-        </div>
-        <div class="category" id="accessories">
-          <h2>Aksesuar</h2>
-          <div class="product-grid" data-category="accessories"></div>
-        </div>
+        <div class="product-grid" id="product-grid"></div>
       </section>
     </main>
     <button class="floating-cart" id="floating-cart" aria-label="Səbətə bax">
@@ -69,10 +68,10 @@
       <span class="cart-count" id="floating-cart-count">0</span>
     </button>
 
-    <!-- Product detail modal -->
+    <!-- Məhsul haqqında modal (Amazon/AliExpress üslubu) -->
     <div class="product-modal" id="product-modal" aria-hidden="true">
       <div class="product-modal-backdrop" id="product-modal-backdrop"></div>
-      <div class="product-modal-content" id="product-modal-content">
+      <div class="product-modal-content">
         <button class="product-modal-close" id="product-modal-close" aria-label="Bağla">×</button>
         <div class="product-modal-body" id="product-modal-body"></div>
       </div>
@@ -95,7 +94,7 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <div>© 2026 Ziya Brand</div>
-        <div>Inter və Montserrat tipoqrafiya</div>
+        <div>Lüks Moda E-Commerce</div>
       </div>
     </footer>
     <script src="./app.js"></script>
