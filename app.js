@@ -1,7 +1,6 @@
 const state = { cart: [] }
 const IMG = (id) => `https://images.unsplash.com/photo-${id}?w=600&h=720&fit=crop&q=85`
 
-// 28 məhsul — saytla eyni məlumatlar
 const products = [
   { id: 'm1', title: 'Klassik Kişi Gödəkçəsi', price: 89, oldPrice: 120, discount: 26, category: 'men', brand: 'Ziya Essentials', rating: 4.8, sold: 12453, desc: 'Yüksək keyfiyyətli parça, klassik dizayn. Gündəlik və iş üçün ideal. 100% pamuk, ölçü: S, M, L, XL.', main: IMG('1594938298603-c8148c4dae35'), alt: IMG('1620799140408-edc6dcb6d633') },
   { id: 'm2', title: 'Premium Kişi Palto', price: 159, oldPrice: 210, discount: 24, category: 'men', brand: 'Ziya Premium', rating: 4.9, sold: 5678, desc: 'İtalyan parçadan yüngül palto. İlk bahar üçün ideal. Sulu və küləyə davamlı.', main: IMG('1591047139829-d91aecb6caea'), alt: IMG('1544022613-e87ca75a784a') },
