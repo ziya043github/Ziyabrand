@@ -23,7 +23,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Arxa plan — saytla uyğun */
 body::before {
   content: '';
   position: fixed;
@@ -37,7 +36,6 @@ body::before {
   pointer-events: none;
 }
 
-/* Top banner */
 .top-banner {
   text-align: center;
   padding: 10px 20px;
@@ -48,7 +46,6 @@ body::before {
   letter-spacing: 0.05em;
 }
 
-/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -125,7 +122,6 @@ body::before {
   padding: 0 6px;
 }
 
-/* Hero */
 .hero {
   padding: 80px 20px 60px;
   text-align: center;
@@ -152,7 +148,6 @@ body::before {
   flex-wrap: wrap;
 }
 
-/* Category cards */
 .category-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -183,7 +178,6 @@ body::before {
   .category-cards { grid-template-columns: 1fr; }
 }
 
-/* All products */
 .all-products {
   max-width: 1200px;
   margin: 0 auto 80px;
@@ -208,7 +202,6 @@ body::before {
 @media (max-width: 768px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px } }
 @media (max-width: 480px) { .product-grid { grid-template-columns: 1fr } }
 
-/* Product card — saytla eyni */
 .product-card {
   position: relative;
   background: var(--card);
@@ -315,7 +308,6 @@ body::before {
   font-weight: 500;
 }
 
-/* Floating cart */
 .floating-cart {
   position: fixed;
   right: 24px;
@@ -347,7 +339,6 @@ body::before {
   color: #fff;
 }
 
-/* Cart drawer */
 .cart-drawer {
   position: fixed;
   inset: 0;
@@ -405,7 +396,6 @@ body::before {
 .cart-total { margin: 0 0 1rem; font-size: 1.1rem; }
 .cart-checkout { width: 100%; }
 
-/* Cart item — miqdar +/- və sil */
 .cart-item { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
 .cart-item:last-child { border-bottom: none; }
 .cart-item-img { width: 72px; height: 96px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
@@ -464,7 +454,6 @@ body::before {
   color: #fff;
 }
 
-/* Product modal — Amazon/AliExpress üslubu */
 .product-modal {
   position: fixed;
   inset: 0;
@@ -551,7 +540,6 @@ body::before {
 .product-modal-size:focus { outline: none; border-color: var(--text); }
 .product-modal-add { width: 100%; padding: 14px; font-size: 1rem; margin-top: 8px; }
 
-/* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
   background: var(--card);
